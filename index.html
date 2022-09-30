@@ -17,13 +17,24 @@
 
 	<!-- Custom stlylesheet -->
 	<link type="text/css" rel="stylesheet" href="css/style.css" />
-
+<script src="/src/main.js"></script>
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
 		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
+		
+	<script>
+		var getdata = () => {
+    let gpswd = document.getElementById("dpswd").value;
+		let gnamedoc = document.getElementById("dnamedoc").value;
+		
+//			alert(gpswd+" & "+gnamedoc);
+			
+		}
+	</script>
+
 	<script>
 var guardarArchivoDeTexto = (contenido, nombre) => {
     const a = document.createElement("a");
@@ -48,7 +59,7 @@ var guardarArchivoDeTexto = (contenido, nombre) => {
 						<!-- <form> -->
 							<div class="col-md-4">
 								<div class="form-group">
-									<input class="form-control" type="text" placeholder="Enter NamDoc">
+									<input class="form-control" type="text" id="dnamedoc" placeholder="Enter NamDoc">
 									<span class="form-label">NamDoc</span>
 								</div>
 							</div>
@@ -82,14 +93,16 @@ var guardarArchivoDeTexto = (contenido, nombre) => {
 							</div> -->
 							<div class="col-md-4">
 								<div class="form-group">
-									<input class="form-control" type="password" placeholder="Enter password" required>
+									<input class="form-control" id="dpswd" type="password" placeholder="Enter password" required>
 									<span class="form-label">Password</span>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-btn">
 									<!-- <button class="submit-btn" onclick="console.log('aaaabb');">Generate</button> -->
-									<button class="submit-btn" onclick="guardarArchivoDeTexto('fooo','foo.test')">Generate</button>
+									<!-- <button class="submit-btn" onclick="guardarArchivoDeTexto('fooo','foo.test')">Generate</button> -->
+
+					<button class="submit-btn" onclick="funtest()">test</button>
 
 								</div>
 							</div>
@@ -100,7 +113,9 @@ var guardarArchivoDeTexto = (contenido, nombre) => {
 		</div>
 	</div>
 
-	<script>
+
+	
+<script>
 // var guardarArchivoDeTexto = (contenido, nombre) => {
 //     const a = document.createElement("a");
 //     const archivo = new Blob([contenido], { type: 'text/html' });
