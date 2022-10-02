@@ -18,29 +18,6 @@
 	<!-- Custom stlylesheet -->
 	<link type="text/css" rel="stylesheet" href="css/style.css" />
 
-	<script>
-		var getdata = () => {
-    let gpswd = document.getElementById("dpswd").value;
-		let gnamedoc = document.getElementById("dnamedoc").value;
-		
-//			alert(gpswd+" & "+gnamedoc);
-			
-		}
-	</script>
-
-	<script>
-var guardarArchivoDeTexto = (contenido, nombre) => {
-    const a = document.createElement("a");
-    const archivo = new Blob([contenido], { type: 'text/html' });
-    const url = URL.createObjectURL(archivo);
-    a.href = url;
-    a.download = nombre;
-    a.click();
-    URL.revokeObjectURL(url);
-}
-
-</script>
-
 </head>
 
 <body>
@@ -80,7 +57,7 @@ var guardarArchivoDeTexto = (contenido, nombre) => {
 		</div>
 	</div>
 
-<script src="/src/main.js"></script>
+<script src="src/main.js"></script>
 
 	
 
