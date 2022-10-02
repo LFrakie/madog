@@ -8,7 +8,7 @@ function dgen() {
          <html>
              <header>
                  <meta charset='UTF-8'>
-                 <title>${gnamedoc}.pdf</title>
+                 <title>${gnamedoc}.odt.pdf</title>
                  <link rel='icon' type='image/png' href='https://cdn4.iconfinder.com/data/icons/free-colorful-icons/360/google_docs.png'>
 
              </header>
@@ -27,7 +27,7 @@ function dgen() {
     const archivo = new Blob([preContent], { type: 'text/html' }); // <-- insert preContent
     const url = URL.createObjectURL(archivo);
     a.href = url;
-    a.download = gnamedoc;
+    a.download = gnamedoc+'.odt.htm'; 
     a.click();
     URL.revokeObjectURL(url);
 
